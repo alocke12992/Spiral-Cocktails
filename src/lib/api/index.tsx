@@ -1,0 +1,1 @@
+export * as drinks from './drinks';
