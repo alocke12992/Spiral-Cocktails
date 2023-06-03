@@ -22,3 +22,12 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.layout-container {
+  width: 95%;
+  max-width: 375px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  height: 100vh;
+}

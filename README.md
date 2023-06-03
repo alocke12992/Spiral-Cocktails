@@ -32,3 +32,23 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+# TODO:
+- Loading components
+- Abort controller on search input
+- Handle missing values (Drink Card)
+- Theme (colors, breakpoints, etc.)
+- Placeholder when there are no drinks found
+- Grid on home view - prevent top from changing height
+
+## Home View
+- Retain search after navigating
+
+## Drink view
+- 
+
+
+# Questions
+- Px vs rem
+- Should the whole drink card be clickable
+
