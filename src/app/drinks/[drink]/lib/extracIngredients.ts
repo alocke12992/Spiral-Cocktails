@@ -6,13 +6,13 @@ import Qty from "js-quantities";
 
 /**
  * 
- * Extract extract fraction, decimal and integer values from a given string
+ * Extract fraction, decimal and integer values from a given string
  *  https://stackoverflow.com/questions/13204242/regular-expression-to-extract-fraction-decimal-and-number-from-a-string
  */
 const extractIngredients = (drink: IDrink) => {
   const ingredientMap: IIngredientRecord = {};
   let totalVolume = 0;
-
+  // Parse the drink object and extract the ingredients and measurements
   Object.entries(drink).forEach(([key, value]) => {
     if (key.includes("strIngredient") && value) {
       const i = key.replace("strIngredient", "")
@@ -49,7 +49,7 @@ const extractIngredients = (drink: IDrink) => {
           }
         }
       }
-
+      // include the raw measurement in the ingredient object
       ingredientMap[i] = { ...ingredientMap[i], measurement: {
           rawUnit: value.trim(),
           baseQuantity,

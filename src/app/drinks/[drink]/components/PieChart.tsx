@@ -21,7 +21,7 @@ const Chart: React.FC<IChartProps> = ({ chartData }) => {
           data={chartData}
           cx="50%"
           cy="50%"
-          outerRadius={50}
+          outerRadius={40}
           stroke="none"
         >
           {

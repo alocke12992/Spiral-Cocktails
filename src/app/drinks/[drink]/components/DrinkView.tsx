@@ -107,6 +107,7 @@ const DualContainer = styled(Flex)`
   width: 100%;
   gap: 4px;
   margin-bottom: 12px;
+  min-height: 120px;
 `
 
 const StyledList = styled.ul`

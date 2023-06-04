@@ -19,7 +19,7 @@ export default function Home() {
         </Header>
         <Search setResults={setResults} setLoading={setLoading} />
         <DrinksContainer>
-          {results.length ? results.map((drink) => (
+          {results?.length ? results.map((drink) => (
             <DrinkCard key={drink.idDrink} {...drink} />
             )
           ) : loading ? (
