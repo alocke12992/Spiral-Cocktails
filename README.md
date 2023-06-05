@@ -27,6 +27,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 - Loading components
 - More robust Theme (colors, breakpoints, etc.)
 - Convert all to css modules - allow more SSR, since it seems styled components requires client render OR get styled-components SSR working
+- Handle missing values / Normalize data after fetch
 
 ### Home View
 - Retain search after navigating (Context)
@@ -34,7 +35,6 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 - Placeholder when there are no drinks found
 
 ### Drink view
-- Handle missing values / Normalize data after fetch
 - Write tests for unit conversions
 
 
@@ -50,4 +50,3 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 - Would like to learn more about how NextJS handles caching -> I.e. Cache single drink view so we don't have to look up every time.
 
 - Got a bit "hacky" when trying to support "shots" and "parts". Could use a cleaner system/approach. Hard b/c there wasn't a standard API to follow to know what different variations we would get back from the API
-

@@ -30,7 +30,6 @@ const extractQtyAndUnit = (measurement: string): IExtractQtyAndUnit | undefined 
     }
   }, 0);
 
-
   const unit = CONVERT_TO_FLUID_OZ.includes(rawUnit) ? 'fluid-ounce' : rawUnit;
   let quantity = rawQuantity;
 

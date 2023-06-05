@@ -33,7 +33,6 @@ const Search: React.FC<ISearchProps> = ({ setResults, setLoading }) => {
           return
         }
         setResults(data.drinks)
-        setLoading(false)
       } else {
         setResults([])
       }

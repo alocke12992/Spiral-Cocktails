@@ -19,6 +19,7 @@ const extractIngredients = (drink: IDrink) => {
       const i = key.replace("strIngredient", "")
       ingredientMap[i] = { name: value, color: stringToHslColor(value) }
     }
+
     if (key.includes("strMeasure") && value) {
       const i = key.replace("strMeasure", "")
       if (!ingredientMap?.[i]) {
@@ -51,7 +52,7 @@ const extractIngredients = (drink: IDrink) => {
       }
       // include the raw measurement in the ingredient object
       ingredientMap[i] = { ...ingredientMap[i], measurement: {
-        rawUnit: value.trim(),
+        rawUnit: value.trim(), // Clean this up -> Only set value if this is the strMeasure
         baseQuantity,
         ratio: 0,
       }}
