@@ -1,8 +1,10 @@
-import extractQtyAndUnit from "@/app/drinks/[drink]/lib/extractQtyAndUnit";
-import stringToHslColor from "@/lib/utils/stringToHslColor";
-import { IDrink } from "@/types/drinks";
-import { IIngredientRecord } from "../types";
 import Qty from "js-quantities";
+
+import stringToHslColor from "@/lib/utils/stringToHslColor";
+import { IIngredientRecord, IDrink } from "@/types";
+
+import extractQtyAndUnit from "./extractQtyAndUnit";
+
 
 /**
  * 

@@ -40,6 +40,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - Theme (colors, breakpoints, etc.)
 - Placeholder when there are no drinks found
 - Grid on home view - prevent top from changing height
+- Convert all to css modules - allow more SSR, since it seems styled components requires client render OR get styled-components SSR working
 
 ## Home View
 - Retain search after navigating

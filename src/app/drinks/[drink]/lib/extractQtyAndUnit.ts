@@ -4,7 +4,6 @@ interface IExtractQtyAndUnit {
   unit: string;
 }
 
-
 const extractQtyAndUnit = (measurement: string): IExtractQtyAndUnit | undefined => {
   const matched = measurement.match(/\d+([\/.]\d+)?/g);
   if (!matched?.length) {

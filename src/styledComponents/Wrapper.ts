@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const PageContainer = styled.div`
+const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,4 +8,4 @@ const PageContainer = styled.div`
   height: 100%;
 `
 
-export default PageContainer
+export default Wrapper

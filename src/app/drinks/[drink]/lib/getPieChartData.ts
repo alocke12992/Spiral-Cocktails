@@ -1,4 +1,4 @@
-import { IChartData, IIngredient } from "../types"
+import { IChartData, IIngredient } from "@/types"
 
 const getPieChartData = (ingredients: IIngredient[], totalVolume: number) => {
   const chartData: IChartData[] = []

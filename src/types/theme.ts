@@ -4,4 +4,5 @@ export interface IColors {
   grey: string;
   lightGrey: string;
   darkGrey: string;
+  blue: string;
 }

@@ -3,8 +3,9 @@ import { IColors } from "@/types/theme";
 const white = '#fff'
 const black = '#000'
 const grey = '#ccc'
-const lightGrey = '#eee'
-const darkGrey = '#939799';
+const lightGrey = '#f7f6f6'
+const darkGrey = '#cacaca';
+const blue = '#007aff';
 
 export const colors: IColors = {
   white,
@@ -12,4 +13,5 @@ export const colors: IColors = {
   grey,
   lightGrey,
   darkGrey,
+  blue,
 }

@@ -11,9 +11,3 @@ export interface IIngredient {
 }
 
 export type IIngredientRecord = Record<string, IIngredient>
-
-export interface IChartData {
-  name: string
-  value: number
-  color: string
-}

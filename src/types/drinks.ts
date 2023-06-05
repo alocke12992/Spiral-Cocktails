@@ -48,9 +48,3 @@ export interface IDrink {
 export interface ISearchDrinksPayload {
   drinks: IDrink[];
 }
-
-export interface IIngredient {
-  ingredient: string;
-  measure: string;
-  normalizedMeasurement: string;
-}

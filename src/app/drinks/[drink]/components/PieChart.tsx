@@ -1,7 +1,8 @@
 'use client'
 import dynamic from "next/dynamic";
 import { Pie, Cell, ResponsiveContainer } from "recharts";
-import { IChartData } from "../types";
+import { IChartData } from "@/types";
+import styled from "styled-components";
 
 // Recharts throws errors when rendered on the server
 // https://stackoverflow.com/questions/72311188/hydration-failed-error-using-recharts-with-nextjs
@@ -14,25 +15,30 @@ const Chart: React.FC<IChartProps> = ({ chartData }) => {
   if (!chartData) return null
 
   return (
-    <ResponsiveContainer width="100%" height="100%">
-      <PieChart>
-        <Pie
-          dataKey="value"
-          data={chartData}
-          cx="50%"
-          cy="50%"
-          outerRadius={40}
-          stroke="none"
-        >
-          {
-            chartData.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={entry.color} />
-            ))
-          }
-        </Pie>
-      </PieChart>
-    </ResponsiveContainer>
+    <Container>
+      <ResponsiveContainer width="100%" height="100%">
+        <PieChart>
+          <Pie
+            dataKey="value"
+            data={chartData}
+            outerRadius={60}
+            stroke="none"
+          >
+            {
+              chartData.map((entry, index) => (
+                <Cell key={`cell-${index}`} fill={entry.color} />
+              ))
+            }
+          </Pie>
+        </PieChart>
+      </ResponsiveContainer>
+    </Container>
   )
 }
 
 export default Chart
+
+const Container = styled.div`
+  height: 120px;
+  width: 120px;
+`
