@@ -35,6 +35,14 @@ const Container = styled(Flex)`
   border-top: 1px solid ${colors.grey};
   padding: 10px;
   height: 60px;
+
+  &:first-child {
+    border-top: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
 `
 
 const StyledImage = styled(Image)`

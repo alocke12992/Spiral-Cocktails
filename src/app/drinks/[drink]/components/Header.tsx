@@ -45,4 +45,8 @@ const Button = styled.div`
   & ${Text} {
     color: ${colors.blue};
   }
+
+  &:hover {
+    cursor: pointer;
+  }
 `

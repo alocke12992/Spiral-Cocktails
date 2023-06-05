@@ -22,10 +22,8 @@ const Ingredients: React.FC<IIngredientsProps> = ({
       <DualContainer align="flex-start">
         <StyledList>
           {ingredients.length && ingredients.map((ingredient) => (
-            <ListItem
-              key={ingredient.name}
-              color={ingredient.color}
-            >
+            <ListItem key={ingredient.name}>
+              <BulletPoint color={ingredient.color} />
               {ingredient.name}
               {ingredient.measurement?.rawUnit && ` (${ingredient.measurement.rawUnit})`}
             </ListItem>
@@ -58,20 +56,19 @@ const StyledList = styled.ul`
   flex: 1;
 `
 
-const ListItem = styled.li<{ color: string }>`
+const ListItem = styled.li`
   list-style: none;
   font-size: 17px;
   margin-bottom: 8px;
   display: flex;
   align-items: center;
+`
 
-  &:before {
-    content: ' ';
-    background-color: ${({ color }) => color};
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border-radius: 3px;
-    margin-right: 4px;
-  }
+const BulletPoint = styled.div<{ color: string }>`
+  background-color: ${({ color }) => color};
+  min-width: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  margin-right: 4px;
 `

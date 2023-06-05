@@ -6,7 +6,7 @@ const TopBar = styled(Flex)`
   width: 100%;
   height: 70px;
   background-color: ${colors.lightGrey};
-  border-bottom: 1px solid ${colors.darkGrey};
+  border-bottom: 1px solid ${colors.grey};
   padding: 10px;
   flex-direction: column;
   justify-content: flex-end;

@@ -44,14 +44,14 @@ const Search: React.FC<ISearchProps> = ({ setResults, setLoading }) => {
   return (
     <Container>
       <InputContainer>
-        <FaSearch />
+        <StyledSearch />
         <Input
           type="text"
           placeholder="Search for a drink"
           value={drinkName}
           onChange={(e) => setDrinkName(e.target.value)}
         />
-        {drinkName && <FaTimesCircle onClick={handleClearResults} />}
+        {drinkName && <StyledClearIcon onClick={handleClearResults} />}
       </InputContainer>
     </Container>
   )
@@ -62,13 +62,24 @@ export default Search
 const Container = styled(Flex)`
   padding: 10px;
   width: 100%;
+  border-bottom: 1px solid ${colors.grey};
+`
+
+const StyledSearch = styled(FaSearch)`
+  color: ${colors.darkGrey};
+  font-size: 12px;
+`
+
+const StyledClearIcon = styled(FaTimesCircle)`
+  color: ${colors.darkGrey};
+  font-size: 12px;
 `
 
 const InputContainer = styled(Flex)`
   position: relative;
   width: 100%;
-  padding: 4px;
-  background: ${colors.grey};
+  padding: 6px;
+  background: ${colors.lightGrey};
   display: flex;
   border-radius: 4px;
   gap: 4px;
@@ -79,6 +90,8 @@ const Input = styled.input`
   border: none;
   background: none;
   padding-left: 4px;
+  font-size: 17px;
+  color: ${colors.black};
   &:focus {
     outline: none;
   }

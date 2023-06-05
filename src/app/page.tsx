@@ -35,4 +35,7 @@ export default function Home() {
 const DrinksContainer = styled.div`
   overflow: scroll;
   width: 100%;
+  height: 100%;
+  /* Additional padding to compensate for TopBar and Search */
+  padding-bottom: 124px;
 `
