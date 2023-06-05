@@ -49,3 +49,5 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 - Would like to learn more about how NextJS handles caching -> I.e. Cache single drink view so we don't have to look up every time.
 
+- Got a bit "hacky" when trying to support "shots" and "parts". Could use a cleaner system/approach. Hard b/c there wasn't a standard API to follow to know what different variations we would get back from the API
+
