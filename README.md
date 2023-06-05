@@ -18,38 +18,32 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## TODO:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-# TODO:
+### Project Wide
 - Loading components
-- Abort controller on search input
-- Handle missing values (Drink Card)
-- Theme (colors, breakpoints, etc.)
-- Placeholder when there are no drinks found
-- Grid on home view - prevent top from changing height
+- More robust Theme (colors, breakpoints, etc.)
 - Convert all to css modules - allow more SSR, since it seems styled components requires client render OR get styled-components SSR working
 
-## Home View
-- Retain search after navigating
+### Home View
+- Retain search after navigating (Context)
+- Abort controller on search input
+- Placeholder when there are no drinks found
 
-## Drink view
-- 
+### Drink view
+- Handle missing values / Normalize data after fetch
+- Write tests for unit conversions
 
 
-# Questions
+## Questions
 - Px vs rem
 - Should the whole drink card be clickable
+
+## Tradeoffs / Takeaways
+- 'use client' vs SSR -> Where possible, attempted to use SSR (e.g. drinks/[drink]) to prevent having to load on the client. Tradeoff -> Home view required client side b/c user input on search required to fetch data
+
+- Choice to use Styled-components -> After realizing NextJs doesn't support SC SSR out of the box, should have gone with css-modules (learned NextJS comes with built in support)
+
+- Would like to learn more about how NextJS handles caching -> I.e. Cache single drink view so we don't have to look up every time.
 
