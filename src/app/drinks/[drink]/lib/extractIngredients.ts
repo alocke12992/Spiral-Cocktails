@@ -5,7 +5,6 @@ import { IIngredientRecord, IDrink } from "@/types";
 
 import extractQtyAndUnit from "./extractQtyAndUnit";
 
-
 /**
  * 
  * Extract fraction, decimal and integer values from a given string
@@ -32,11 +31,10 @@ const extractIngredients = (drink: IDrink) => {
       let baseQuantity = 0
       if (extracted?.unit && extracted?.quantity) {
         const { quantity, unit } = extracted
-        console.log('quantity', quantity, 'unit', unit)
+
         // edge case support for "parts"
         // NOTE: I don't like this
         if (unit === 'part') {
-          totalVolume = 1
           baseQuantity = quantity / 1
         } else {
           try {
@@ -53,10 +51,10 @@ const extractIngredients = (drink: IDrink) => {
       }
       // include the raw measurement in the ingredient object
       ingredientMap[i] = { ...ingredientMap[i], measurement: {
-          rawUnit: value.trim(),
-          baseQuantity,
-          ratio: 0,
-      } }
+        rawUnit: value.trim(),
+        baseQuantity,
+        ratio: 0,
+      }}
     }
   })
   return { ingredients: Object.values(ingredientMap), totalVolume }
